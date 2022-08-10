@@ -75,7 +75,6 @@ const Skill = () => {
       <PageHeading children="Skills" />
       {skills &&
         skills.map((skill) => {
-          console.log();
           return (
             <div className={classes.skillIndiv}>
               <div className={classes.skillType}>{skill.skillType}</div>
