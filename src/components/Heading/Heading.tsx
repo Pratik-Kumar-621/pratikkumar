@@ -4,10 +4,11 @@ import { colors } from "../../styles/colors";
 // Styles
 const useStyles = makeStyles({
   pageHeading: {
-    fontSize: "1.75rem",
+    fontSize: "2.1rem",
     fontWeight: 600,
     color: colors.pageHeading,
     letterSpacing: "0.1rem",
+    marginBottom: "2.4rem",
   },
 });
 

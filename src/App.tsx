@@ -16,8 +16,8 @@ const App = () => {
   const classes = useStyles();
   return (
     <div className={classes.app}>
-      {/* <Skill /> */}
-      <Project />
+      <Skill />
+      {/* <Project /> */}
     </div>
   );
 };
