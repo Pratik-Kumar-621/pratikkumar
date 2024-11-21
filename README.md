@@ -1,6 +1,4 @@
-# Personal portfolio project
+# Personal portfolio
 
-## Link:
+<strong>Visit Page: </strong> [https://pratikkr.vercel.app/](https://pratikkr.vercel.app/)
 
-
-### Blog
