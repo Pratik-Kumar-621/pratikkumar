@@ -1,3 +1,5 @@
+@import "./mixins";
+
 .landing {
   min-height: 90vh;
   position: relative;
@@ -18,11 +20,98 @@
     opacity: 0.5;
     z-index: 0;
   }
-  &-navigation,
-  &-info,
-  &-links,
-  &-image {
+
+  &-nav {
     position: relative;
     z-index: 1;
+    margin: 0 80px 40px;
+    padding-top: 40px;
+  }
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-hamburger {
+      display: none;
+    }
+    &-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+    &-links {
+      display: flex;
+      &-item {
+        @include buttonBasic;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        color: #fff !important;
+      }
+    }
+    &-button {
+      width: 140px;
+      @include buttonBasic;
+    }
+  }
+  &-content {
+    position: relative;
+    z-index: 1;
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+  &-info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: flex-end;
+    &-name {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &-skill {
+      margin-top: 15px;
+      font-size: 48px;
+      font-weight: bold;
+    }
+    &-pitch {
+      margin-top: 20px;
+      font-size: 21px;
+    }
+  }
+  &-links {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-start;
+    &-cv {
+      padding-top: 30px;
+      &-button {
+        @include buttonBasic;
+        width: 160px;
+      }
+    }
+    &-social {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      &-item {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-image {
+    justify-self: flex-end;
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    &-container {
+      width: 100%;
+      max-width: 600px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
+
+// @1250px changing the padding, font-sizes for the navigation

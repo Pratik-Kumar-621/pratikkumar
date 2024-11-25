@@ -7,10 +7,14 @@ import LandingImage from "./Picture";
 const LandingUI = () => {
   return (
     <div className="landing">
-      <LandingNavigation />
-      <LandingInfo />
-      <LandingLinks />
-      <LandingImage />
+      <div className="landing-nav">
+        <LandingNavigation />
+      </div>
+      <div className="landing-content">
+        <LandingInfo />
+        <LandingLinks />
+        <LandingImage />
+      </div>
     </div>
   );
 };

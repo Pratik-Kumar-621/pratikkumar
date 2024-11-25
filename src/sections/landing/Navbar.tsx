@@ -1,5 +1,6 @@
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Button } from "@mui/material";
 
 const LandingNavigation = () => {
   const [open, setOpen] = React.useState(false);
@@ -17,14 +18,20 @@ const LandingNavigation = () => {
           open ? "open" : "close"
         }`}
       >
-        <div className="landing-navigation-links-item">Services</div>
-        <div className="landing-navigation-links-item">Skills</div>
-        <div className="landing-navigation-links-item">Works</div>
-        <div className="landing-navigation-links-item">Blogs</div>
-        <div className="landing-navigation-links-item">Testimonials</div>
-        <div className="landing-navigation-links-item">Contact</div>
+        <Button className="landing-navigation-links-item">Services</Button>
+        <Button className="landing-navigation-links-item">Skills</Button>
+        <Button className="landing-navigation-links-item">Works</Button>
+        <Button className="landing-navigation-links-item">Blogs</Button>
+        <Button className="landing-navigation-links-item">Testimonials</Button>
+        <Button className="landing-navigation-links-item">Contact</Button>
       </div>
-      <div className="landing-navigation-button">Hire Me </div>
+      <Button
+        className="landing-navigation-button"
+        variant="contained"
+        color="primary"
+      >
+        Hire Me
+      </Button>
     </div>
   );
 };
