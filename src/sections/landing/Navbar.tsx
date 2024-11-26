@@ -12,7 +12,7 @@ const LandingNavigation = () => {
       <div className="landing-navigation-hamburger" onClick={handleHamburger}>
         <MenuIcon />
       </div>
-      <div className="landing-navigation-logo">Pratik Kumar</div>
+      <Button className="landing-navigation-logo">Pratik Kumar</Button>
       <div
         className={`landing-navigation-links landing-navigation-links-mobile-${
           open ? "open" : "close"

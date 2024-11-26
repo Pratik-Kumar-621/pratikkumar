@@ -1,4 +1,5 @@
 @import "./mixins";
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
 
 .landing {
   min-height: 90vh;
@@ -35,9 +36,16 @@
       display: none;
     }
     &-logo {
-      font-size: 2rem;
+      font-size: 2rem !important;
+      color: #fff !important;
+      font-weight: bold !important;
+      text-transform: none !important;
+      border-radius: 50%;
+      height: auto;
+      font-family: "Sevillana", cursive;
       font-weight: bold;
       font-style: italic;
+      cursor: pointer;
     }
     &-links {
       display: flex;
