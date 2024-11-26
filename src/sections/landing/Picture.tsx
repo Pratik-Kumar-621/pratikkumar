@@ -1,12 +1,10 @@
 import React from "react";
-const logo = require("../../assets/profile1.png");
+const logo = require("../../assets/profile3.jpeg");
 
 const LandingImage = () => {
   return (
     <div className="landing-image">
-      <div className="landing-image-container">
-        <img src={logo} alt="" />
-      </div>
+      <img src={logo} alt="" />
     </div>
   );
 };

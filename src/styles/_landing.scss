@@ -1,4 +1,4 @@
-@import "./mixins";
+@use "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
 
 .landing {
@@ -26,7 +26,7 @@
     position: relative;
     z-index: 1;
     margin: 0 80px 40px;
-    padding-top: 40px;
+    padding-top: 25px;
   }
   &-navigation {
     display: flex;
@@ -36,13 +36,13 @@
       display: none;
     }
     &-logo {
+      font-family: "Sevillana", cursive !important;
       font-size: 2rem !important;
       color: #fff !important;
       font-weight: bold !important;
       text-transform: none !important;
-      border-radius: 50%;
+      border-radius: 50% !important;
       height: auto;
-      font-family: "Sevillana", cursive;
       font-weight: bold;
       font-style: italic;
       cursor: pointer;
@@ -50,7 +50,7 @@
     &-links {
       display: flex;
       &-item {
-        @include buttonBasic;
+        @include mixins.buttonBasic;
         padding-left: 20px !important;
         padding-right: 20px !important;
         color: #fff !important;
@@ -58,13 +58,13 @@
     }
     &-button {
       width: 140px;
-      @include buttonBasic;
+      @include mixins.buttonBasic;
     }
   }
   &-content {
     position: relative;
     z-index: 1;
-    margin: 0 80px;
+    margin: 30px 80px 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
@@ -75,13 +75,14 @@
     grid-row: 1/2;
     align-self: flex-end;
     &-name {
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 20px;
+      font-weight: 700;
     }
     &-skill {
       margin-top: 15px;
+      height: 60px;
       font-size: 48px;
-      font-weight: bold;
+      font-weight: 800;
     }
     &-pitch {
       margin-top: 20px;
@@ -92,32 +93,46 @@
     grid-column: 1/2;
     grid-row: 2/3;
     align-self: flex-start;
+
     &-cv {
       padding-top: 30px;
       &-button {
-        @include buttonBasic;
-        width: 160px;
+        @include mixins.buttonBasic;
+        width: 210px;
+        height: 48px;
+        font-size: 1.05rem !important;
       }
     }
+    gap: 30px;
     &-social {
-      margin-top: 20px;
       display: flex;
-      gap: 10px;
+      gap: 20px;
+      margin-top: 30px;
+      align-items: center;
       &-item {
-        transform: scale(1.1);
+        border: 1px solid white;
+        transform: scale(1.2);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        @include mixins.flexCenter;
+        &-button {
+          transform: scale(0.8);
+        }
       }
     }
   }
   &-image {
-    justify-self: flex-end;
+    justify-self: center;
     grid-column: 2/3;
     grid-row: 1/-1;
-    &-container {
-      width: 100%;
-      max-width: 600px;
-      img {
-        width: 100%;
-      }
+    border-radius: 16px !important;
+    max-width: 600px;
+    img {
+      max-height: 450px;
+      border-radius: 16px !important;
+      transform: rotate(5deg);
+      border: 5px solid rgb(245, 245, 255);
     }
   }
 }
