@@ -1,65 +1,77 @@
 import React from "react";
+import SectionHeading from "./SectionHeading";
 
-const skills = [
-  {
-    category: "Development",
-    items: [
-      "HTML/CSS",
+const skills = {
+  development: {
+    title: "Development",
+    skills: [
+      "HTML",
+      "CSS",
       "Scss",
-      "React",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
       "Next.js",
       "React Native",
-      "TypeScript",
-      "Tailwind CSS",
-      "Capacitor",
       "Node.js",
-      "Express",
-      "REST APIs",
-    ],
-  },
-
-  {
-    category: "Tools",
-    items: ["Figma", "Canva", "Postman", "Docker", "Git", "VS Code"],
-  },
-  {
-    category: "Libraries",
-    items: [
-      "Material-UI",
-      "Ant Design",
-      "Tailwind CSS",
-      "Firebase",
-      "Redux",
+      "Express.js",
+      "MongoDB",
+      "PostgreSQL",
       "Prisma",
+      "Rest APIs",
     ],
   },
-];
+  tools: {
+    title: "Tools",
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Figma",
+      "Docker",
+      "Vercel",
+      "Netlify",
+    ],
+  },
+  libraries: {
+    title: "Libraries",
+    skills: [
+      "Tailwind CSS",
+      "Material UI",
+      "ShadCN",
+      "Redux",
+      "Formik",
+      "Firebase",
+      "Clerk",
+    ],
+  },
+};
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skillGroup, index) => (
+    <section id="skills" className="py-20 bg-gray-100">
+      <div className="container mx-auto px-4 max-w-[1350px]">
+        <SectionHeading title="Skills" />
+        <div className="space-y-12">
+          {Object.entries(skills).map(([category, skillGroup]) => (
             <div
-              key={index}
-              className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              key={category}
+              className="bg-white p-6 rounded-lg shadow-xl border border-gray-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-blue-600">
-                {skillGroup.category}
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">
+                {skillGroup.title}
               </h3>
-              <ul className="space-y-2">
-                {skillGroup.items.map((skill, skillIndex) => (
-                  <li
+              <div className="flex flex-wrap gap-3">
+                {skillGroup.skills.map((skill, skillIndex) => (
+                  <span
                     key={skillIndex}
-                    className="flex items-center text-gray-700"
+                    className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
                   >
-                    <span className="text-blue-500 mr-2">•</span>
                     {skill}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

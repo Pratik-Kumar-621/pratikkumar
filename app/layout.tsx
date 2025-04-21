@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <link rel="icon" href="/favicon.webp" sizes="any" />
       <body className={`${inter.className} scroll-smooth`}>{children}</body>
     </html>
   );
