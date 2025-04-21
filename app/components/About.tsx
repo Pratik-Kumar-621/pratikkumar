@@ -15,7 +15,7 @@ const majorSkills = {
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-100">
+    <section id="about" className="py-20 pb-0 bg-gray-100">
       <div className="container mx-auto px-4 max-w-[1350px]">
         <SectionHeading
           title="About Me"

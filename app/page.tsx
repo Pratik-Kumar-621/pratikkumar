@@ -5,7 +5,8 @@ import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
 // import Contributions from "./components/Contributions";
 // import Blogs from "./components/Blogs";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
         {/*
         <Projects />
         <Contributions />
-        <Blogs />
-        <Contact /> */}
+        <Blogs />*/}
+        <Contact />
+        <ToastContainer />
       </main>
     </>
   );

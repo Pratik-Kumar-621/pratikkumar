@@ -51,6 +51,12 @@ const Navbar = () => {
     { href: "#blogs", label: "Blogs" },
     { href: "#contact", label: "Contact" },
   ];
+  const handleScroll = (link: string) => {
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm">
@@ -63,13 +69,13 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <div
                 key={link.href}
-                href={link.href}
-                className="text-gray-300 hover:text-white transition-colors"
+                onClick={() => handleScroll(link.href)}
+                className="text-gray-300 hover:text-white transition-colors cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </div>
             ))}
           </div>
 

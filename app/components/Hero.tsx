@@ -1,7 +1,14 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
 const Hero = () => {
+  const handleScroll = (link: string) => {
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -29,18 +36,18 @@ const Hero = () => {
             enhance everyday experiences.
           </p>
           <div className="flex justify-center gap-6 mb-8">
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            <div
+              onClick={() => handleScroll("#contact")}
+              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
             >
               Get in Touch
-            </a>
-            <a
-              href="#projects"
-              className="px-6 py-3 border-2 border-blue-300 text-blue-300 rounded-lg hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
+            </div>
+            <div
+              onClick={() => handleScroll("#projects")}
+              className="px-6 py-3 border-2 border-blue-300 text-blue-300 rounded-lg hover:border-blue-400 hover:text-blue-400 transition-all duration-300 cursor-pointer"
             >
               View My Work
-            </a>
+            </div>
           </div>
           {/* Social Links */}
           <div className="flex justify-center items-center space-x-6">
