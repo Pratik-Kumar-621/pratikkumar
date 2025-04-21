@@ -51,7 +51,7 @@ const About = () => {
                     <ul className="space-y-2">
                       {value.skills.map((skill, index) => (
                         <li key={index} className="flex items-center">
-                          <span className="text-blue-500 mr-2">•</span>
+                          <span className="text-blue-800 mr-2">•</span>
                           <span className="text-gray-900">{skill}</span>
                         </li>
                       ))}
@@ -114,7 +114,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex gap-4 md:hidden">
+            <div className="flex gap-4 justify-center md:hidden">
               <a
                 href="/pratik_kumar.pdf"
                 className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"

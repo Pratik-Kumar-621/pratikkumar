@@ -50,7 +50,10 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-100">
+    <section
+      id="skills"
+      className="py-20 md:pt-10 pt-0 bg-gray-100 transition-all delay-200"
+    >
       <div className="container mx-auto px-4 max-w-[1350px]">
         <SectionHeading
           title="Skills"
