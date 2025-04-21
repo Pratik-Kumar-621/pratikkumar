@@ -47,8 +47,7 @@ const Navbar = () => {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#contributions", label: "Contributions" },
-    { href: "#blogs", label: "Blogs" },
+    // { href: "#blogs", label: "Blogs" },
     { href: "#contact", label: "Contact" },
   ];
   const handleScroll = (link: string) => {
@@ -62,9 +61,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-white text-xl font-bold">
+          <div
+            className="text-white text-xl font-bold cursor-pointer"
+            onClick={() => handleScroll("#top")}
+          >
             Pratik Kumar
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

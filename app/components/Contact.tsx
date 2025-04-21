@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const [state, handleSubmit, reset] = useForm("mwpleooq");
   if (state.succeeded) {
-    toast.success("Submitted Successfully! We will get in touch soon", {
+    toast.success("Thank you for reaching out! I will contact you soon.", {
       toastId: "submit-form",
       position: "top-right",
       autoClose: 5000,
