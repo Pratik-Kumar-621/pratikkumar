@@ -52,7 +52,10 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 max-w-[1350px]">
-        <SectionHeading title="Skills" />
+        <SectionHeading
+          title="Skills"
+          subtitle="Technologies and tools I work with to build amazing applications"
+        />
         <div className="space-y-12">
           {Object.entries(skills).map(([category, skillGroup]) => (
             <div

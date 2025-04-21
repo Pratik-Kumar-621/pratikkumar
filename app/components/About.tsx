@@ -17,7 +17,10 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 max-w-[1350px]">
-        <SectionHeading title="About Me" />
+        <SectionHeading
+          title="About Me"
+          subtitle="Get to know more about my skills, experience, and what I do"
+        />
         <div className="grid md:grid-cols-2 gap-2 md:gap-14 items-start">
           <div className="space-y-6">
             <p className="text-lg text-gray-900">
