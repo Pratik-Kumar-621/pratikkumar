@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SectionHeading from "./SectionHeading";
 
@@ -50,12 +51,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white flex flex-col justify-around rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white flex flex-col justify-around rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-[1.05] transition-all group cursor-pointer"
+              onClick={() =>
+                window.open(project.live, "_blank", "noopener,noreferrer")
+              }
             >
-              <div className="h-52 bg-gray-200">
-                {/* Replace with actual image */}
+              <div className="h-52 bg-gray-200 overflow-hidden">
                 <div
-                  className="w-full h-full bg-cover bg-top"
+                  className="w-full h-full bg-cover bg-top transition-transform duration-300 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
                 ></div>
               </div>
