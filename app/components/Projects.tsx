@@ -29,13 +29,13 @@ const projects = [
     live: "https://google-clone-assignment-6.vercel.app/",
   },
   {
-    title: "Multi-step form",
+    title: "Swapcell EV Landing Page",
     description:
-      "A dynamic multi-step form with smooth transitions between steps and data visualization.",
+      "A landing page for an EV battery swap startup offering instant, on-the-go power.",
     technologies: ["React.js", "Scss", "Typescript", "Material UI"],
-    image: "/projects/multistep.png",
-    github: "https://github.com/Pratik-Kumar-621/multistep-form",
-    live: "https://multistep-form21.vercel.app/",
+    image: "/projects/swapcell.png",
+    github: "https://github.com/Pratik-Kumar-621/Swapcell-EV",
+    live: "https://swapcell-ev.vercel.app/",
   },
 ];
 
