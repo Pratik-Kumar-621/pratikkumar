@@ -29,13 +29,13 @@ const projects = [
     live: "https://google-clone-assignment-6.vercel.app/",
   },
   {
-    title: "Swapcell EV Landing Page",
+    title: "WEBFORMSIMPLIFIED",
     description:
-      "A landing page for an EV battery swap startup offering instant, on-the-go power.",
+      "A production-grade 'forms-focused' UI library designed for building complex form workflows.",
     technologies: ["React.js", "Scss", "Typescript", "Material UI"],
-    image: "/projects/swapcell.png",
-    github: "https://github.com/Pratik-Kumar-621/Swapcell-EV",
-    live: "https://swapcell-ev.vercel.app/",
+    image: "/projects/wfs.png",
+    github: "https://github.com/Pratik-Kumar-621/webformsimplified",
+    live: "https://webformsimplified.vercel.app/",
   },
 ];
 
